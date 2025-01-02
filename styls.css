@@ -268,96 +268,57 @@ html{
     right: -15px;
     font-size: 14px;
 }
-/* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
-    width: 0%;
-    animation: 2s javascript forwards;
-}
-@keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 75%;}
+/* Barra base */
+.skills .skill .progreso {
+    width: 0%; /* Inicia en 0% */
+    animation: animate-progress 2s ease-in-out forwards; /* Animación única */
 }
 
-.skills .skill .htmlcss{
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-@keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 89%;}
-}
-
-.skills .skill .photoshop{
-    width: 0%;
-    animation: 2s photoshop forwards;
-}
-@keyframes photoshop {
-    0%{width: 0%;}
-    100%{width: 95%;}
+/* Definición de la animación genérica */
+@keyframes animate-progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: var(--final-width); /* Valor dinámico definido por la variable CSS */
+    }
 }
 
-.skills .skill .wordpress{
-    width: 0%;
-    animation: 2s wordpress forwards;
+/* Valores específicos para cada barra */
+.skills .skill .javascript {
+    --final-width: 25%;
 }
-@keyframes wordpress {
-    0%{width: 0%;}
-    100%{width: 81%;}
+.skills .skill .htmlcss {
+    --final-width: 70%;
 }
-
-.skills .skill .drupal{
-    width: 0%;
-    animation: 2s drupal forwards;
+.skills .skill .photoshop {
+    --final-width: 95%;
 }
-@keyframes drupal {
-    0%{width: 0%;}
-    100%{width: 55%;}
+.skills .skill .python {
+    --final-width: 81%;
 }
-
-.skills .skill .comunicacion{
-    width: 0%;
-    animation: 2s comunicacion forwards;
+.skills .skill .sql {
+    --final-width: 65%;
 }
-@keyframes comunicacion {
-    0%{width: 0%;}
-    100%{width: 80%;}
+.skills .skill .comunicacion {
+    --final-width: 80%;
 }
-
-.skills .skill .trabajo{
-    width: 0%;
-    animation: 2s trabajo forwards;
+.skills .skill .trabajo {
+    --final-width: 70%;
 }
-@keyframes trabajo {
-    0%{width: 0%;}
-    100%{width: 70%;}
+.skills .skill .creatividad {
+    --final-width: 99%;
 }
-
-.skills .skill .creatividad{
-    width: 0%;
-    animation: 2s creatividad forwards;
+.skills .skill .dedicacion {
+    --final-width: 55%;
 }
-@keyframes creatividad {
-    0%{width: 0%;}
-    100%{width: 99%;}
+.skills .skill .proyect {
+    --final-width: 94%;
+}
+.skills .skill .r {
+    --final-width: 95%; /* Define el ancho final para R */
 }
 
-.skills .skill .dedicacion{
-    width: 0%;
-    animation: 2s dedicacion forwards;
-}
-@keyframes dedicacion {
-    0%{width: 0%;}
-    100%{width: 65%;}
-}
-
-.skills .skill .proyect{
-    width: 0%;
-    animation: 2s proyect forwards;
-}
-@keyframes proyect {
-    0%{width: 0%;}
-    100%{width: 94%;}
-}
 /* SECCION CURRICULUM */
 .curriculum{
     background-color: #1e2326;
